@@ -1,3 +1,3 @@
-## Week Three Project - Blackjack
+## Blackjack Project
 
-### 
+### Week Three Skill Distillery

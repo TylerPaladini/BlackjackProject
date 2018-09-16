@@ -28,6 +28,7 @@ Deck deck = new Deck();
 	}
 
 	public void clearHand() {
+		deck.shuffleDeck();
 
 	}
 

@@ -36,48 +36,29 @@ public class Dealer extends Hand {
 			System.out.println("Your current hand total is " + dealer.getHandValue(playerHand));
 			if (dealer.getHandValue(playerHand) == 21) {
 				dealer.playerGetsBlackjack();
-//				System.out.println("That's Blackjack!!! You beat the house!");
-				System.out.println("Do you want to play again? (yes) or (no)");
-				String choice = keyboard.next();
-				if (choice.equals("yes")) {
-
-					dealer.clearHand();
-					System.out.println(deck.checkDeckSize());
-				} else if (choice.equals("no")) {
-					System.out.println("Thank you for playing. Enjoy the rest of your day.");
-				} else if (dealer.getHandValue(playerHand) > 21) {
-					dealer.playerBusts();
-					System.out.println("Wow you busted in the very first hand");
-					System.out.println("Would you like to play again? (yes) or (no)");
-					if (choice.equals("yes")) {
-						dealer.clearHand();
-						System.out.println(deck.checkDeckSize());
-					} else {
-						System.out.println("Thanks for playing. Enjoy the rest of your day");
-					}
-				}
+				return;
+//				System.out.println("Do you want to play again? (yes) or (no)");
+//				String choice = keyboard.next().toLowerCase();
+//				if (choice.equals("yes")) {
+//
+//					dealer.clearHand();
+//					System.out.println(deck.checkDeckSize());
+//				} else if (choice.equals("no")) {
+//					System.out.println("Thank you for playing. Enjoy the rest of your day.");
+//				} else if (dealer.getHandValue(playerHand) > 21) {
+//					dealer.playerBusts();
+//					System.out.println("Wow you busted in the very first hand");
+//					System.out.println("Would you like to play again? (yes) or (no)");
+//					if (choice.equals("yes")) {
+//						dealer.clearHand();
+//						System.out.println(deck.checkDeckSize());
+//					} else {
+//						System.out.println("Thanks for playing. Enjoy the rest of your day");
+//					}
+//				}
 			}
 			System.out.println("Do you want to hit or stay?");
-			String choice = keyboard.next();
-			if (choice.equals("stay")) {
-				System.out.println("Ok, it's the dealer's turn now \n\n");
-			}
-
-				while (dealer.getHandValue(dealerHand) < 17 
-						|| dealer.getHandValue(playerHand) > dealer.getHandValue(dealerHand)) {
-					dealerHand.add(deck.dealCard());
-					System.out.println("The dealer's hand is now " + dealerHand);
-					System.out.println("The dealer's total is " + dealer.getHandValue(dealerHand));
-					if (dealer.getHandValue(dealerHand) > 21) {
-						dealer.dealerBusts();
-					}
-					else if (dealer.getHandValue(dealerHand) == 21) {
-						dealer.dealerGetsBlackjack();
-					}
-
-				}
-			
-
+			String choice = keyboard.next().toLowerCase();
 			while (choice.equals("hit")) {
 				playerHand.add(deck.dealCard());
 
@@ -92,11 +73,43 @@ public class Dealer extends Hand {
 					System.out.println("Your new hand is " + playerHand);
 					System.out.println("and the total is " + dealer.getHandValue(playerHand));
 					System.out.println("Hit or Stay");
-					choice = keyboard.next();
+					choice = keyboard.next().toLowerCase();
 
 				}
 			}
 
+			System.out.println("Ok it's the dealer's turn");
+			System.out.println("The dealer is showing hand " + dealer.getHandValue(dealerHand));
+			if (dealer.getHandValue(dealerHand) == 21) {
+				dealer.dealerGetsBlackjack();
+				return;
+			}
+
+			while (dealer.getHandValue(dealerHand) < 17
+					|| dealer.getHandValue(playerHand) > dealer.getHandValue(dealerHand)) {
+
+				System.out.println("Dealer hits");
+				dealerHand.add(deck.dealCard());
+				System.out.println("The dealer's hand is now " + dealerHand);
+				System.out.println("The dealer's total is " + dealer.getHandValue(dealerHand));
+
+			}
+			if (dealer.getHandValue(dealerHand) > 21) {
+				dealer.dealerBusts();
+				return;
+			}
+
+			else if (dealer.getHandValue(dealerHand) > dealer.getHandValue(playerHand)) {
+				dealer.dealerGetsBlackjack();
+				return;
+			
+			} else if (dealer.getHandValue(dealerHand) > 21) {
+				dealer.dealerBusts();
+				return;
+			} else if (dealer.getHandValue(dealerHand) == dealer.getHandValue(playerHand)) {
+				dealer.push();
+				return;
+			}
 		}
 
 	}
@@ -125,5 +138,11 @@ public class Dealer extends Hand {
 		System.out.println("-------------------------");
 		System.out.println("----------Dealer---------");
 		System.out.println("----------BUSTS----------");
+	}
+
+	public void push() {
+		System.out.println("-------------------------");
+		System.out.println("----------PUSH-----------");
+		System.out.println("-------It's a DRAW-------");
 	}
 }

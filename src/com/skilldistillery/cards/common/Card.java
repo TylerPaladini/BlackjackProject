@@ -11,8 +11,8 @@ public class Card {
 		this.rank = rank;
 	}
 	
-	public int getValue(Card c) {
-		int value = rank.getValue();
+	public int getValue() {
+		int value = this.rank.getValue();
 		
 		return value;
 				

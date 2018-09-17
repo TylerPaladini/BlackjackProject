@@ -13,33 +13,29 @@ public class BlackJackApp {
 
 	public static void main(String[] args) {
 		BlackJackApp bj = new BlackJackApp();
-		
+
 		bj.run();
-		
-	
-		
+
 	}
-	
+
 	public void run() {
 		Dealer dealer = new Dealer();
 		Scanner keyboard = new Scanner(System.in);
 		System.out.println("Welcome to the Blackjack table.");
 		System.out.println("Are you ready to play? Yes or No");
 		String choice = keyboard.next().toLowerCase();
-		if(choice.equals("no")) {
+		if (choice.equals("no")) {
 			System.out.println("Then leave my table!!!!");
-		}
-		else {
+		} else {
 			while (choice.equals("yes")) {
-			dealer.dealingCards();
-			System.out.println("Do you want to play again? yes or no");
-			choice = keyboard.next();
-			
+				dealer.dealingCards();
+				System.out.println("Do you want to play again? yes or no");
+				choice = keyboard.next();				}
+
 			}
-			
+
 		}
-		
-		
+
 	}
 
-}
+

@@ -10,14 +10,14 @@ import com.skilldistillery.cards.common.Card;
 import com.skilldistillery.cards.common.Deck;
 
 public class Dealer extends Hand {
-//	Deck deck = new Deck();
 
 	public void dealingCards() {
 		Dealer dealer = new Dealer();
 		Scanner keyboard = new Scanner(System.in);
 
 		List<Card> dealerHand = new ArrayList<>();
-		for (int i = 0; i < 1; i++) {
+		System.out.println("The number of cards still available in this deck is " + deck.checkDeckSize());
+//		for (int i = 0; i < 1; i++) {
 			deck.shuffleDeck();
 			dealerHand.add(deck.dealCard());
 			System.out.println("The dealer has dealt two cards. ");
@@ -29,43 +29,24 @@ public class Dealer extends Hand {
 			for (int j = 0; j < 2; j++) {
 				playerHand.add(deck.dealCard());
 			}
+
 			System.out.println("Your first two cards are " + playerHand);
-//			System.out.println(deck.checkDeckSize());
-			// figure out how to add the players cards.
-//			player.getHandValue(playerHand);
 			System.out.println("Your current hand total is " + dealer.getHandValue(playerHand));
 			if (dealer.getHandValue(playerHand) == 21) {
 				dealer.playerGetsBlackjack();
 				return;
-//				System.out.println("Do you want to play again? (yes) or (no)");
-//				String choice = keyboard.next().toLowerCase();
-//				if (choice.equals("yes")) {
-//
-//					dealer.clearHand();
-//					System.out.println(deck.checkDeckSize());
-//				} else if (choice.equals("no")) {
-//					System.out.println("Thank you for playing. Enjoy the rest of your day.");
-//				} else if (dealer.getHandValue(playerHand) > 21) {
-//					dealer.playerBusts();
-//					System.out.println("Wow you busted in the very first hand");
-//					System.out.println("Would you like to play again? (yes) or (no)");
-//					if (choice.equals("yes")) {
-//						dealer.clearHand();
-//						System.out.println(deck.checkDeckSize());
-//					} else {
-//						System.out.println("Thanks for playing. Enjoy the rest of your day");
-//					}
-//				}
+
 			}
 			System.out.println("Do you want to hit or stay?");
 			String choice = keyboard.next().toLowerCase();
+			
 			while (choice.equals("hit")) {
 				playerHand.add(deck.dealCard());
 
 				if (dealer.getHandValue(playerHand) > 21) {
 					System.out.println("Ouch your total is " + dealer.getHandValue(playerHand));
 					dealer.playerBusts();
-					break;
+					return;
 
 				}
 
@@ -78,8 +59,9 @@ public class Dealer extends Hand {
 				}
 			}
 
-			System.out.println("Ok it's the dealer's turn");
-			System.out.println("The dealer is showing hand " + dealer.getHandValue(dealerHand));
+			System.out.println("Ok it's the dealer's turn \n");
+			System.out.println("The dealer is showing " + dealerHand);
+			System.out.println("with a total value of " + dealer.getHandValue(dealerHand));
 			if (dealer.getHandValue(dealerHand) == 21) {
 				dealer.dealerGetsBlackjack();
 				return;
@@ -88,7 +70,7 @@ public class Dealer extends Hand {
 			while (dealer.getHandValue(dealerHand) < 17
 					|| dealer.getHandValue(playerHand) > dealer.getHandValue(dealerHand)) {
 
-				System.out.println("Dealer hits");
+				System.out.println("Dealer hits \n");
 				dealerHand.add(deck.dealCard());
 				System.out.println("The dealer's hand is now " + dealerHand);
 				System.out.println("The dealer's total is " + dealer.getHandValue(dealerHand));
@@ -102,7 +84,7 @@ public class Dealer extends Hand {
 			else if (dealer.getHandValue(dealerHand) > dealer.getHandValue(playerHand)) {
 				dealer.dealerGetsBlackjack();
 				return;
-			
+
 			} else if (dealer.getHandValue(dealerHand) > 21) {
 				dealer.dealerBusts();
 				return;
@@ -112,7 +94,7 @@ public class Dealer extends Hand {
 			}
 		}
 
-	}
+//	}
 
 	public void playerGetsBlackjack() {
 		System.out.println("-------------------------");
@@ -124,7 +106,7 @@ public class Dealer extends Hand {
 		System.out.println("-------------------------");
 		System.out.println("---------BUSTED----------");
 		System.out.println("----------LOSER----------");
-		System.exit(0);
+		
 	}
 
 	public void dealerGetsBlackjack() {

@@ -98,41 +98,62 @@ public class Dealer extends Hand {
 //	}
 
 	public void playerGetsBlackjack() {
-		System.out.println("-------------------------");
-		System.out.println("-------BlackJack---------");
-		System.out.println("--------Winner-----------");
+		System.out.println("\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" +
+				"\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f"
+				+ "\u272f" + "\u272f" + "\u272f" + "\u272f");
+		System.out.println("       BlackJack!!!      ");
+		System.out.println("         Winner          ");
+		System.out.println("\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" +
+				"\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f"
+				+ "\u272f" + "\u272f" + "\u272f" + "\u272f");
 	}
 
 	public void playerBusts() {
-		System.out.println("-------------------------");
-		System.out.println("---------BUSTED----------");
-		System.out.println("----------LOSER----------");
+		System.out.println("\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" +
+				"\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f"
+				+ "\u272f" + "\u272f" + "\u272f" + "\u272f");
+		System.out.println("         BUSTED          ");
+		System.out.println("        YOU LOSE         ");
+		System.out.println("\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" +
+				"\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f"
+				+ "\u272f" + "\u272f" + "\u272f" + "\u272f");
+		
 
 	}
 
 	public void dealerGetsBlackjack() {
-		System.out.println("-------------------------");
-		System.out.println("---------BlackJack-------");
-		System.out.println("----------Dealer---------");
-		System.out.println("---------Wins------------");
+		System.out.println("\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" +
+				"\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f"
+				+ "\u272f" + "\u272f" + "\u272f" + "\u272f");
+		System.out.println("        BlackJack        ");
+		System.out.println("        Dealer Wins!!    ");
+		System.out.println("\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" +
+				"\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f"
+				+ "\u272f" + "\u272f" + "\u272f" + "\u272f");
 	}
 
 	public void dealerBusts() {
-		System.out.println("-------------------------");
-		System.out.println("----------Dealer---------");
-		System.out.println("----------BUSTS----------");
+		System.out.println("\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" +
+				"\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f"
+				+ "\u272f" + "\u272f" + "\u272f" + "\u272f");
+		System.out.println("          Dealer         ");
+		System.out.println("          BUSTS!!!       ");
+		System.out.println("\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" +
+				"\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f"
+				+ "\u272f" + "\u272f" + "\u272f" + "\u272f");
 	}
 
 	public void push() {
-		System.out.println("-------------------------");
-		System.out.println("----------PUSH-----------");
-		System.out.println("-------It's a DRAW-------");
+		System.out.println("\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" +
+				"\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f"
+				+ "\u272f" + "\u272f" + "\u272f" + "\u272f");
+		System.out.println("           PUSH          ");
+		System.out.println("        It's a DRAW      ");
+		System.out.println("\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" +
+				"\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f"
+				+ "\u272f" + "\u272f" + "\u272f" + "\u272f");
 	}
 	
-	public void deckRunningOut() {
-		System.out.println("I must apologize, I am a new dealer and forgot to bring extra decks of cards.");
-		System.out.println("This is extremely embarassing. My only option is to reshuffle our current deck");
-		System.out.println("I know this is against the rules, but if you won't tell I won't.");
-	}
+	
 
 }

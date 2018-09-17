@@ -33,7 +33,7 @@ public class Deck {
 	
 	public List<Card> shuffleDeck() {
 		Collections.shuffle(deck);
-		
+
 		return deck;
 	}
 }

@@ -18,7 +18,6 @@ public class Dealer extends Hand {
 		List<Card> dealerHand = new ArrayList<>();
 	
 		System.out.println("The number of cards still available in this deck is " + deck.checkDeckSize());
-//		for (int i = 0; i < 1; i++) {
 		deck.shuffleDeck();
 		dealerHand.add(deck.dealCard());
 		System.out.println("The dealer has dealt two cards. ");
@@ -95,7 +94,7 @@ public class Dealer extends Hand {
 		}
 	}
 
-//	}
+
 
 	public void playerGetsBlackjack() {
 		System.out.println("\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" + "\u272f" +

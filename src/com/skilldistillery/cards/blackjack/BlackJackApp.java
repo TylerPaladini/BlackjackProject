@@ -33,6 +33,10 @@ public class BlackJackApp {
 				choice = keyboard.next();
 	
 			}
+			if(choice.equals("no")) {
+				System.out.println("Thank you for playing. Enjoy the rest of day.");
+			}
+			
 
 		}
 

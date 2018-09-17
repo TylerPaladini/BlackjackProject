@@ -30,12 +30,12 @@ public class BlackJackApp {
 			while (choice.equals("yes")) {
 				dealer.dealingCards();
 				System.out.println("Do you want to play again? yes or no");
-				choice = keyboard.next();				}
-
+				choice = keyboard.next();
+	
 			}
 
 		}
 
 	}
 
-
+}

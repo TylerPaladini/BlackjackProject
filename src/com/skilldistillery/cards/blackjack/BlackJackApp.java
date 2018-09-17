@@ -40,6 +40,7 @@ public class BlackJackApp {
 
 		}
 
+		keyboard.close();
 	}
 
 }

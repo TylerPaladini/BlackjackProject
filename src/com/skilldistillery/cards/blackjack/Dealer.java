@@ -57,7 +57,6 @@ public class Dealer extends Hand {
 				choice = keyboard.next().toLowerCase();
 
 			}
-			keyboard.close();
 		}
 
 		System.out.println("Ok it's the dealer's turn \n");
